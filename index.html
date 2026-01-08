@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>McVerse Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" src="music/bg.mp3" loop></audio>
+
+<div class="background"></div>
+
+<div class="launcher">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">McVerse</div>
+
+    <!-- Gamemodes -->
+    <div class="modes">
+      <button class="mode active" data-mode="survival">🌿 Survival SMP</button>
+      <button class="mode" data-mode="lifesteal">❤️ Lifesteal</button>
+      <button class="mode" data-mode="oneblock">🧊 OneBlock</button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+      <button class="nav-btn active" data-page="home">Home</button>
+      <button class="nav-btn" data-page="players">Players</button>
+      <button class="nav-btn" data-page="stats">Stats</button>
+    </div>
+
+    <div class="ip" onclick="copyIP()">play.mcverse.in</div>
+  </aside>
+
+  <!-- Main -->
+  <main class="content">
+    <h1 id="title">Survival SMP</h1>
+    <p id="desc">Long-term vanilla survival focused on community builds.</p>
+
+    <!-- HOME -->
+    <div class="page active" id="home">
+      <div class="info">
+        <div><span id="playersCount">--</span><small>Players Online</small></div>
+        <div><span id="maxPlayers">--</span><small>Max Players</small></div>
+        <div><span id="version">--</span><small>Version</small></div>
+      </div>
+    </div>
+
+    <!-- PLAYERS -->
+    <div class="page" id="players">
+      <h2>Online Players</h2>
+      <div id="playerList">Loading...</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="page" id="stats">
+      <h2>Server Statistics</h2>
+
+      <div class="stats-grid">
+        <div class="stat">
+          <span id="status">--</span>
+          <small>Status</small>
+        </div>
+        <div class="stat">
+          <span id="ping">-- ms</span>
+          <small>Ping</small>
+        </div>
+        <div class="stat">
+          <span id="motd">--</span>
+          <small>MOTD</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMING SOON (FOR MODES) -->
+    <div class="page" id="coming">
+      <div class="soon-box">
+        <h2>🚧 Coming Soon</h2>
+        <p>This gamemode is under development.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="play" onclick="copyIP()">▶ Play</button>
+    </div>
+  </main>
+
+</div>
+
+<footer>McVerse Network • Not affiliated with Mojang</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
